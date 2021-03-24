@@ -81,7 +81,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Signup"
+        initialRouteName="AppFirstLaunch"
         headerMode= "none">
         <Stack.Screen name="AppFirstLaunch" component={AppFirstLaunch} />
         <Stack.Screen name="Onboarding" component={Onboarding} />
