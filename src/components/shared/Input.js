@@ -23,6 +23,7 @@ const Input = ({
   numberOfLines,
   type,
   name,
+  multiline,
 }) => {
 
   const { containerStyle, inputStyle, iconStyle } = styles;
@@ -50,6 +51,7 @@ const Input = ({
         secureTextEntry={secureTextEntry}
         maxLength={maxLength}
         numberOfLines={numberOfLines}
+        multiline={multiline}
       />
     </View>
   );
@@ -66,7 +68,6 @@ const styles = StyleSheet.create({
     borderColor: '#CCD0EA',
     marginBottom: 30,
     alignItems: 'center',
-    // alignSelf: 'center',
     backgroundColor: '#FFFFFF',
     paddingHorizontal: 20,
     ...Platform.select({
@@ -83,7 +84,7 @@ const styles = StyleSheet.create({
   inputStyle: {
     letterSpacing: RFPercentage(0.1),
     width: '90%',
-    color: '#2033A0',
+    color: '#000000',
     paddingLeft: 5,
   },
   iconStyle: {

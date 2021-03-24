@@ -9,25 +9,24 @@ export default class AppFirstLaunch extends Component {
   navigateTo = (screen, params) => this.props.navigation.navigate(screen, params);
 
   isFirstTimeUser = async () => {
-    this.props.navigation.navigate('Signup');
-    // try {
-    //   const isFirstTimeUser = await AsyncStorage.getItem('first_time_user');
-    //   const isLoggedIn = await AsyncStorage.getItem('token');
-    //   if (isFirstTimeUser !== null) {
-    //     if (isLoggedIn !== null) {
-    //       this.props.navigation.navigate('Home');
-    //     } else {
-    //       this.props.navigation.navigate('Login');
-    //     }
-    //   } else {
-    //     console.log('else', isFirstTimeUser);
-    //     this.props.navigation.navigate('Signup');
-    //   }
-    // } catch (e) {
-    //   // error reading value
-    //   console.error('This is an error', e);
-
-    // }
+    // this.props.navigation.navigate('Signup');
+    try {
+      const isFirstTimeUser = await AsyncStorage.getItem('first_time_user');
+      const isLoggedIn = await AsyncStorage.getItem('token');
+      if (isFirstTimeUser !== null) {
+        if (isLoggedIn !== null) {
+          this.props.navigation.navigate('Home');
+        } else {
+          this.props.navigation.navigate('Login');
+        }
+      } else {
+        console.log('else', isFirstTimeUser);
+        this.props.navigation.navigate('Onboarding');
+      }
+    } catch (e) {
+      // error reading value
+      console.error('This is an error', e);
+    }
   }
 
   render () {

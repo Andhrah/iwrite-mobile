@@ -40,6 +40,9 @@ export default StyleSheet.create({
   paddingBottomStyle: {
     paddingBottom: 10,
   },
+  paddingBottomStyle50: {
+    paddingBottom: 50,
+  },
   whiteColor: {
     color: '#FFFFFF',
   },
@@ -99,6 +102,9 @@ export default StyleSheet.create({
   },
   paddingHorizontal20: {
     paddingHorizontal: 20,
+  },
+  paddingHorizontal30: {
+    paddingHorizontal: 30,
   },
   paddingVertical: {
     paddingVertical: 10,
